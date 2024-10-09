@@ -37,6 +37,21 @@ except ValueError as e:
     print(f'[{e}]')
 
 
+while True:
+    try:
+        num = int(input('Informe u número: '))
+    except (ValueError) as e:
+        print(f'{e} Valor informado não é válido')
+    except KeyboardInterrupt as e:
+        print(f'{e} Entrada interrompida pelo usuário')
+        break
+    else:
+        print(f'{num} informado com sucesso')
+        break
+
+    
+
+
 
 
 
