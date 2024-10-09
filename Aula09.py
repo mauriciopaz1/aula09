@@ -12,16 +12,31 @@ os.system('cls')
 #     print('\nO usúario cancelou a operação...')
     
 
-try:
-    txt = input('Informe o nome:  ')[0]
-except IndexError as e:
-    print (f'{e} Precisa digitar algo: ')
-else:
-    print('Acertou')
-finally:
-    print('Sempre executado')
+# try:
+#     txt = input('Informe o nome:  ')[0]
+# except IndexError as e:
+#     print (f'{e} Precisa digitar algo: ')
+# else:
+#     print('Acertou')
+# finally:
+#     print('Sempre executado')
 
-    
+
+
+
+try:
+    resp = input('Informe (s/n): ').lower()
+
+    if resp == '':
+        raise EOFError('Você não digitou nada')
+    if  resp.isdigit():
+        raise ValueError('Não infome números')
+except EOFError as e:
+    print(f'[{e}]')
+except ValueError as e:
+    print(f'[{e}]')
+
+
 
 
 
